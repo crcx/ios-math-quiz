@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Problems-->
@@ -95,26 +96,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="210" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-re-KH1">
+                                <rect key="frame" x="176" y="28" width="249" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="ldo-vD-G0v"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                    <segment title="x"/>
+                                    <segment title="÷"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Upper Limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSV-aI-xff">
+                                <rect key="frame" x="176" y="82" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="qBQ-sc-SsF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lower Limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhX-Ls-HeE">
+                                <rect key="frame" x="328" y="82" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Zii-1V-yvM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper Limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozQ-ru-vsJ">
+                                <rect key="frame" x="176" y="120" width="97" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="vDE-kI-xpo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lower Limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbS-qQ-gye">
+                                <rect key="frame" x="328" y="120" width="97" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="tQW-9Z-xGL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="centerX" secondItem="v2Z-re-KH1" secondAttribute="centerX" constant="-0.5" id="16q-rw-Bgf"/>
+                            <constraint firstItem="LbS-qQ-gye" firstAttribute="leading" secondItem="ozQ-ru-vsJ" secondAttribute="trailing" constant="55" id="1Ye-vF-NiC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BhX-Ls-HeE" secondAttribute="trailing" constant="159" id="2Pu-s2-5al"/>
+                            <constraint firstItem="OSV-aI-xff" firstAttribute="top" secondItem="v2Z-re-KH1" secondAttribute="bottom" constant="26" id="2Vt-CC-31X"/>
+                            <constraint firstItem="LbS-qQ-gye" firstAttribute="top" secondItem="BhX-Ls-HeE" secondAttribute="bottom" constant="8" id="32v-XK-HOD"/>
+                            <constraint firstItem="ozQ-ru-vsJ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="160" id="68r-Z2-QHI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LbS-qQ-gye" secondAttribute="trailing" constant="159" id="9PA-ei-bBw"/>
+                            <constraint firstItem="OSV-aI-xff" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="160" id="J31-lZ-oTE"/>
+                            <constraint firstItem="ozQ-ru-vsJ" firstAttribute="top" secondItem="OSV-aI-xff" secondAttribute="bottom" constant="8" id="Jtj-L1-QGc"/>
+                            <constraint firstItem="BhX-Ls-HeE" firstAttribute="top" secondItem="v2Z-re-KH1" secondAttribute="bottom" constant="26" id="LBS-if-iuj"/>
+                            <constraint firstItem="BhX-Ls-HeE" firstAttribute="leading" secondItem="OSV-aI-xff" secondAttribute="trailing" constant="55" id="PCE-0s-N6i"/>
+                            <constraint firstItem="v2Z-re-KH1" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="kzY-Zd-KJr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
