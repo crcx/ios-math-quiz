@@ -49,8 +49,8 @@ class FirstViewController: UIViewController {
         var f: Int
         var s: Int
         
-        f = random() % 12
-        s = random() % 12
+        f = (Int)(arc4random() % 12)
+        s = (Int)(arc4random() % 12)
         updateProblem("\(f)", second: "\(s)")
     }
     
