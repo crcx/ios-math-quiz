@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2885C01919FD3BD60031A132 /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885C01819FD3BD60031A132 /* SettingsDataStore.swift */; };
 		28E6699219F418EB0097E59F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6699119F418EB0097E59F /* AppDelegate.swift */; };
 		28E6699419F418EB0097E59F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6699319F418EB0097E59F /* FirstViewController.swift */; };
 		28E6699619F418EB0097E59F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6699519F418EB0097E59F /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2885C01819FD3BD60031A132 /* SettingsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
 		28E6698C19F418EB0097E59F /* Math Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E6699019F418EB0097E59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E6699119F418EB0097E59F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				28E6699119F418EB0097E59F /* AppDelegate.swift */,
 				28E6699319F418EB0097E59F /* FirstViewController.swift */,
 				28E6699519F418EB0097E59F /* SecondViewController.swift */,
+				2885C01819FD3BD60031A132 /* SettingsDataStore.swift */,
 				28E6699719F418EB0097E59F /* Main.storyboard */,
 				28E6699A19F418EB0097E59F /* Images.xcassets */,
 				28E6699C19F418EB0097E59F /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 			files = (
 				28E6699619F418EB0097E59F /* SecondViewController.swift in Sources */,
 				28E6699219F418EB0097E59F /* AppDelegate.swift in Sources */,
+				2885C01919FD3BD60031A132 /* SettingsDataStore.swift in Sources */,
 				28E6699419F418EB0097E59F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				28E669AF19F418EB0097E59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28E669B019F418EB0097E59F /* Build configuration list for PBXNativeTarget "Math QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				28E669B219F418EB0097E59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
