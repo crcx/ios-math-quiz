@@ -18,6 +18,13 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func limtChanged(sender: AnyObject) {
+        var id = sender as NSObject;
+        if id == lowerLimit {
+            NSLog(lowerLimit.text)
+        }
+        if id == upperLimit {
+            NSLog(upperLimit.text)
+        }
     }
     
     override func viewDidLoad() {
