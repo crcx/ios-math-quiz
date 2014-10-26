@@ -10,16 +10,18 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var lowerLimit: UITextField!
+    @IBOutlet weak var upperLimit: UITextField!
+    @IBOutlet weak var operationChoice: UISegmentedControl!
+
+    @IBAction func gameModeChanged(sender: AnyObject) {
+    }
+    
+    @IBAction func limtChanged(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

@@ -96,8 +96,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-re-KH1">
-                                <rect key="frame" x="176" y="28" width="249" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-re-KH1">
+                                <rect key="frame" x="176" y="36" width="249" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="ldo-vD-G0v"/>
                                 </constraints>
@@ -107,6 +107,9 @@
                                     <segment title="x"/>
                                     <segment title="÷"/>
                                 </segments>
+                                <connections>
+                                    <action selector="gameModeChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="9ys-55-Vwp"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Upper Limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSV-aI-xff">
                                 <rect key="frame" x="176" y="82" width="97" height="30"/>
@@ -115,6 +118,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="limtChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="BPM-7m-nwY"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lower Limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhX-Ls-HeE">
                                 <rect key="frame" x="328" y="82" width="97" height="30"/>
@@ -123,6 +129,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="limtChanged:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="nTk-VM-61a"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper Limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozQ-ru-vsJ">
                                 <rect key="frame" x="176" y="120" width="97" height="21"/>
@@ -160,6 +169,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="lowerLimit" destination="BhX-Ls-HeE" id="0qx-ka-S7A"/>
+                        <outlet property="operationChoice" destination="v2Z-re-KH1" id="0I7-fW-QQi"/>
+                        <outlet property="upperLimit" destination="OSV-aI-xff" id="Qg2-gx-xjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
