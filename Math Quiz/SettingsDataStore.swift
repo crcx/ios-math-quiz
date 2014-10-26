@@ -24,9 +24,21 @@ class SettingsDataStore {
         return Static.instance!
     }
     
+    func getUpper() -> (Int) {
+        return self.upper
+    }
+
+    func getLower() -> (Int) {
+        return self.lower
+    }
+
+    func getGameMode() -> (Int) {
+        return self.gameMode
+    }
+
     init() {
         self.lower = 0
         self.upper = 0
-        self.gameMode = 0
+        self.gameMode = 2
     }
 }

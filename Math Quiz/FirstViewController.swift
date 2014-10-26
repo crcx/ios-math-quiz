@@ -9,6 +9,8 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    var settings: SettingsDataStore!
 
     @IBOutlet weak var top: UILabel!
     @IBOutlet weak var middle: UILabel!
@@ -30,6 +32,8 @@ class FirstViewController: UIViewController {
         
         var tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
+        
+        settings = SettingsDataStore.sharedInstance
         generateNewProblem()
     }
     
@@ -38,6 +42,18 @@ class FirstViewController: UIViewController {
         bottom.text = second;
         a = first.toInt()!
         b = second.toInt()!
+        switch (settings.getGameMode()) {
+            case 0: middle.text = "+"
+                break
+            case 1: middle.text = "-"
+                break
+            case 2: middle.text = "x"
+                break
+            case 3: middle.text = "/"
+                break
+            default:
+                break
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +71,21 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func buttonWasPressed(sender: AnyObject) {
-        if answer.text.toInt()! == (a * b) {
+        var expected = 0
+        switch (settings.getGameMode()) {
+        case 0: expected = a + b
+            break
+        case 1: expected = a - b
+            break
+        case 2: expected = a * b
+            break
+        case 3: expected = a / b
+            break
+        default:
+            break
+        }
+
+        if answer.text.toInt()! == expected {
             var alert = UIAlertView(title: "Correct!", message:"", delegate: self, cancelButtonTitle:nil)
             alert.show()
             alert.dismissWithClickedButtonIndex(0, animated: true)
